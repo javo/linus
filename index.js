@@ -71,6 +71,7 @@ exports.name = function(cb) {
 
   var done = function(err, name) {
     if (err) return cb(err);
+    if (name.toString().indexOf('openSUSE') != -1) name = 'Opensuse';
 
     cb(null, name.toString().replace(' Linux', ''));
   }
